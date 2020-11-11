@@ -10,7 +10,7 @@ export default function ResultCalculation(props) {
                     <DataResult title={"Primer número: "} value={`${Num1}.`}/>
                     <DataResult title={"Segundo número: "} value={`${Num2}.`}/>
                     <DataResult title={"Operación realizada: "} value={`${operacion}.`}/>
-                    <DataResult style={styles.total} title={"Total: "} value={`$${total.settotal}.`}/>
+                    <DataResult style={styles.totals} title={"Resultado: "} value={`$${total.dato}.`}/>
                 </View>
             )}
             <View>
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
         fontWeight:"bold",
         fontSize:20,
     },
-    total:{
+    totals:{
         fontWeight:"bold",
     }
 })

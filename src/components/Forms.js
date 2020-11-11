@@ -15,7 +15,7 @@ export default function Form (props){
 				placeholder={{
 					label: "Operación a realizar",
 					value: null,
-					color: "black",
+					color: "grey",
 				}}
 				useNativeAndroidPickerStyle={false}
             	onValueChange={(value) => setoperacion(value)}

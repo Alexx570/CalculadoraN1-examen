@@ -30,20 +30,28 @@ export default function App(){
 		} else{
 			if(setoperacion==1){
 				total=(Num1)+Num2;
+				setTotal({
+					dato: total.toFixed(2),
+				})
 			}
 			else if (setoperacion==2){
 				total=Num1-Num2;
+				setTotal({
+					dato: total.toFixed(2),
+				})
 			}
 			else if (setoperacion==3){
 				total=Num1*Num2;
+				setTotal({
+					dato: total.toFixed(2),
+				})
 			}
 			else if (setoperacion==4){
 				total=Num1/Num2;
+				setTotal({
+					dato: total.toFixed(2),
+				})
 			}
-
-			setTotal({
-				settotal: total.toFixed(2),
-			})
 		}
 	}
 

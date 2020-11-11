@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
         position:"absolute",
         bottom:0,
         width:"100%",
-        backgroundColor: colors.PRIMARY_COLOR,
+        backgroundColor: colors.PRIMARY_COLOR_DARK,
         height:100,
         borderTopLeftRadius: 30,
         borderTopRightRadius: 30,
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
         textAlign: "center",
     },
     button:{
-        backgroundColor: colors.PRIMARY_COLOR_DARK,
+        backgroundColor: colors.PRIMARY_COLOR,
         padding: 16,
         borderRadius:20,
         width:"75%",
