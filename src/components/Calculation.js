@@ -7,10 +7,10 @@ export default function ResultCalculation(props) {
         <View style={styles.content}>
             {total && (
                 <View style={styles.boxContent}>
-                    <DataResult title={"Primer número: "} value={`${Num1}.`}/>
-                    <DataResult title={"Segundo número: "} value={`${Num2}.`}/>
-                    <DataResult title={"Operación realizada: "} value={`${operacion}.`}/>
-                    <DataResult style={styles.totals} title={"Resultado: "} value={`$${total.dato}.`}/>
+                    <DataResult title={"Primer número: "} value={`${Num1}`}/>
+                    <DataResult title={"Segundo número: "} value={`${Num2}`}/>
+                    <DataResult title={"Operación realizada: "} value={`${operacion}`}/>
+                    <DataResult style={styles.totals} title={"Resultado: "} value={`${total.dato}`}/>
                 </View>
             )}
             <View>

@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import { StyleSheet, View, Text, SafeAreaView, StatusBar, YellowBox } from "react-native";
-import Form from "./src/components/Forms";
+import Forms from "./src/components/Forms";
 import ResultCalculation from "./src/components/Calculation";
 import Footer from "./src/components/Footer";
 import colors from "./src/utils/colors";
@@ -10,7 +10,7 @@ YellowBox.ignoreWarnings(['Picker has been extracted']);
 export default function App(){
 	const [Num1, setNum1] = useState(null);
 	const [Num2, setNum2] = useState(null);
-	const [operacion, setoperacion]= useState(null);
+	const [operacion, setOperacion]= useState(null);
 	const [total, setTotal]= useState(null);
 	const [errorMessage, setErrorMessage] = useState("");
 
@@ -28,28 +28,29 @@ export default function App(){
 		} else if (!operacion){
 			setErrorMessage("Seleccione la operación a realizar");
 		} else{
-			if(setoperacion==1){
-				total=(Num1)+Num2;
+
+			if(operacion=='Suma'){
+				const resul=[Num1+Num2];
 				setTotal({
-					dato: total.toFixed(2),
+					dato: resul.toFixed(2),
 				})
 			}
-			else if (setoperacion==2){
-				total=Num1-Num2;
+			else if (operacion=='Resta'){
+				const resul=Num1-Num2;
 				setTotal({
-					dato: total.toFixed(2),
+					dato: resul.toFixed(2),
 				})
 			}
-			else if (setoperacion==3){
-				total=Num1*Num2;
+			else if (operacion=='Multiplicación'){
+				const resul=Num1*Num2;
 				setTotal({
-					dato: total.toFixed(2),
+					dato: resul.toFixed(2),
 				})
 			}
-			else if (setoperacion==4){
-				total=Num1/Num2;
+			else if (operacion=='División'){
+				const resul=Num1/Num2;
 				setTotal({
-					dato: total.toFixed(2),
+					dato: resul.toFixed(2),
 				})
 			}
 		}
@@ -66,10 +67,10 @@ export default function App(){
 	  	<SafeAreaView style={styles.safeArea}>
 		  <View style={styles.background}></View>
 		  <Text style={styles.titleApp}>Calculadora</Text>
-		  <Form
+		  <Forms
 			  setNum1={setNum1}
 			  setNum2={setNum2}
-			  setoperacion={setoperacion}
+			  setOperacion={setOperacion}
 		  />
 		</SafeAreaView>
 		<ResultCalculation 

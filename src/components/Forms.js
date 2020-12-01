@@ -3,8 +3,8 @@ import { StyleSheet, TextInput, View } from "react-native";
 import colors from "../utils/colors";
 import RNPickerSelect from 'react-native-picker-select';
 
-export default function Form (props){
-	const {setNum1, setNum2, setoperacion} = props;
+export default function Forms (props){
+	const {setNum1, setNum2, setOperacion} = props;
 	return(
 		<View style={styles.viewForm}>
 			<View style={styles.viewInput}>
@@ -18,12 +18,12 @@ export default function Form (props){
 					color: "grey",
 				}}
 				useNativeAndroidPickerStyle={false}
-            	onValueChange={(value) => setoperacion(value)}
+            	onValueChange={(value) => setOperacion(value)}
             	items={[
-                	{ label: 'Suma', value: '1' },
-                	{ label: 'Resta', value: '2' },
-                	{ label: 'Multiplicación', value: '3' },
-                	{ label: 'Divición', value: '4'},
+                	{ label: 'Suma', value: 'Suma' },
+                	{ label: 'Resta', value: 'Resta'},
+                	{ label: 'Multiplicación', value: 'Multiplicación'},
+                	{ label: 'División', value: 'División'},
             	]}
         	/>
 		</View>
